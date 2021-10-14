@@ -1,4 +1,4 @@
-const Figure = ({ grid }) => {
+const Figure = ({ grid, gridClicked }) => {
   return (
     <svg height="300" width="300" className="figure-container">
       {/* <!-- Grid --> */}
@@ -6,18 +6,16 @@ const Figure = ({ grid }) => {
       <line x1="200" y1="0" x2="200" y2="300" />
       <line x1="0" y1="100" x2="300" y2="100" />
       <line x1="0" y1="200" x2="300" y2="200" />
-
       {/* O's */}
       {grid[0][0] === 0 && <circle cx="50" cy="50" r="30" />}
       {grid[0][1] === 0 && <circle cx="150" cy="50" r="30" />}
       {grid[0][2] === 0 && <circle cx="250" cy="50" r="30" />}
       {grid[1][0] === 0 && <circle cx="50" cy="150" r="30" />}
       {grid[1][1] === 0 && <circle cx="150" cy="150" r="30" />}
-      {grid[1][0] === 0 && <circle cx="250" cy="150" r="30" />}
+      {grid[1][2] === 0 && <circle cx="250" cy="150" r="30" />}
       {grid[2][0] === 0 && <circle cx="50" cy="250" r="30" />}
       {grid[2][1] === 0 && <circle cx="150" cy="250" r="30" />}
       {grid[2][2] === 0 && <circle cx="250" cy="250" r="30" />}
-
       {/* X's */}
       {grid[0][0] === 1 && (
         <>
@@ -73,6 +71,80 @@ const Figure = ({ grid }) => {
           <line x1="280" y1="220" x2="220" y2="280" />
         </>
       )}
+
+      {/* Rectangles */}
+      <rect
+        onClick={() => gridClicked(0, 0)}
+        x="0"
+        y="0"
+        width="100"
+        height="100"
+        strokeWidth="0"
+      />
+      <rect
+        onClick={() => gridClicked(1, 0)}
+        x="100"
+        y="0"
+        width="100"
+        height="100"
+        strokeWidth="0"
+      />
+      <rect
+        onClick={() => gridClicked(2, 0)}
+        x="200"
+        y="0"
+        width="100"
+        height="100"
+        strokeWidth="0"
+      />
+      <rect
+        onClick={() => gridClicked(0, 1)}
+        x="0"
+        y="100"
+        width="100"
+        height="100"
+        strokeWidth="0"
+      />
+      <rect
+        onClick={() => gridClicked(1, 1)}
+        x="100"
+        y="100"
+        width="100"
+        height="100"
+        strokeWidth="0"
+      />
+      <rect
+        onClick={() => gridClicked(2, 1)}
+        x="200"
+        y="100"
+        width="100"
+        height="100"
+        strokeWidth="0"
+      />
+      <rect
+        onClick={() => gridClicked(0, 2)}
+        x="0"
+        y="200"
+        width="100"
+        height="100"
+        strokeWidth="0"
+      />
+      <rect
+        onClick={() => gridClicked(1, 2)}
+        x="100"
+        y="200"
+        width="100"
+        height="100"
+        strokeWidth="0"
+      />
+      <rect
+        onClick={() => gridClicked(2, 2)}
+        x="200"
+        y="200"
+        width="100"
+        height="100"
+        strokeWidth="0"
+      />
     </svg>
   );
 };

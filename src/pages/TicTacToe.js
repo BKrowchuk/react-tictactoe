@@ -11,11 +11,26 @@ const TicTacToe = () => {
     [2, 2, 2],
   ]);
 
+  const gridClicked = (x, y) => {
+    if (grid[y][x] === 2) {
+      let copy = [...grid];
+      if (whosTurn) {
+        copy[y][x] = 1;
+      } else {
+        copy[y][x] = 0;
+      }
+      setGrid(copy);
+      setWhosTurn(!whosTurn);
+    } else {
+      console.log("That Squares Taken");
+    }
+  };
+
   return (
     <>
       <Header />
       <div className="game-container">
-        <Figure grid={grid} />
+        <Figure grid={grid} gridClicked={gridClicked} />
         <WhosTurn whosTurn={whosTurn} />
       </div>
       {/* <Popup
