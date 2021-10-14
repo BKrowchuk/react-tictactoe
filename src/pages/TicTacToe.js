@@ -1,9 +1,10 @@
 import { useState } from "react";
 import Header from "../components/Header";
 import Figure from "../components/Figure";
+import WhosTurn from "../components/WhosTurn";
 
 const TicTacToe = () => {
-  const [whosTurn, setWhosTurn] = useState(1);
+  const [whosTurn, setWhosTurn] = useState(true);
   const [grid, setGrid] = useState([
     [2, 2, 2],
     [2, 2, 2],
@@ -15,7 +16,7 @@ const TicTacToe = () => {
       <Header />
       <div className="game-container">
         <Figure grid={grid} />
-        {/* <WhosTurn whosTurn={whosTurn} /> */}
+        <WhosTurn whosTurn={whosTurn} />
       </div>
       {/* <Popup
         correctLetters={correctLetters}
