@@ -10,27 +10,28 @@ const TicTacToe = () => {
   const [whosTurn, setWhosTurn] = useState(true);
   const [showNotification, setShowNotification] = useState(false);
   const [grid, setGrid] = useState([
-    [2, 2, 2],
-    [2, 2, 2],
-    [2, 2, 2],
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0],
   ]);
 
   const playAgain = () => {
-    // Empty Arrays
+    // reset state
+    setWhosTurn(true);
     setGrid([
-      [2, 2, 2],
-      [2, 2, 2],
-      [2, 2, 2],
+      [0, 0, 0],
+      [0, 0, 0],
+      [0, 0, 0],
     ]);
   };
 
   const gridClicked = (x, y) => {
-    if (grid[y][x] === 2) {
+    if (grid[y][x] === 0) {
       let copy = [...grid];
       if (whosTurn) {
         copy[y][x] = 1;
       } else {
-        copy[y][x] = 0;
+        copy[y][x] = 2;
       }
       setGrid(copy);
       setWhosTurn(!whosTurn);

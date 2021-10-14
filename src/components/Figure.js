@@ -7,15 +7,15 @@ const Figure = ({ grid, gridClicked }) => {
       <line x1="0" y1="100" x2="300" y2="100" />
       <line x1="0" y1="200" x2="300" y2="200" />
       {/* O's */}
-      {grid[0][0] === 0 && <circle cx="50" cy="50" r="30" />}
-      {grid[0][1] === 0 && <circle cx="150" cy="50" r="30" />}
-      {grid[0][2] === 0 && <circle cx="250" cy="50" r="30" />}
-      {grid[1][0] === 0 && <circle cx="50" cy="150" r="30" />}
-      {grid[1][1] === 0 && <circle cx="150" cy="150" r="30" />}
-      {grid[1][2] === 0 && <circle cx="250" cy="150" r="30" />}
-      {grid[2][0] === 0 && <circle cx="50" cy="250" r="30" />}
-      {grid[2][1] === 0 && <circle cx="150" cy="250" r="30" />}
-      {grid[2][2] === 0 && <circle cx="250" cy="250" r="30" />}
+      {grid[0][0] === 2 && <circle cx="50" cy="50" r="30" />}
+      {grid[0][1] === 2 && <circle cx="150" cy="50" r="30" />}
+      {grid[0][2] === 2 && <circle cx="250" cy="50" r="30" />}
+      {grid[1][0] === 2 && <circle cx="50" cy="150" r="30" />}
+      {grid[1][1] === 2 && <circle cx="150" cy="150" r="30" />}
+      {grid[1][2] === 2 && <circle cx="250" cy="150" r="30" />}
+      {grid[2][0] === 2 && <circle cx="50" cy="250" r="30" />}
+      {grid[2][1] === 2 && <circle cx="150" cy="250" r="30" />}
+      {grid[2][2] === 2 && <circle cx="250" cy="250" r="30" />}
       {/* X's */}
       {grid[0][0] === 1 && (
         <>

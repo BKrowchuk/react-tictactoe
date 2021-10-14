@@ -3,7 +3,6 @@ import { checkWin } from "../helpers/Helpers";
 const Popup = ({ playAgain, grid }) => {
   let finalMessage = "";
   const winner = checkWin(grid);
-  console.log(winner);
   if (winner === "X") {
     finalMessage = "X's Won! 😃";
   } else if (winner === "O") {
